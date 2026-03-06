@@ -1,0 +1,13 @@
+# @package _global_
+
+defaults:
+  - /trainer: base
+  - /dataloader: base
+  - /model: mlp
+  - _self_
+
+earthrovers:
+  trainer:
+    wandb:
+      group: data_mixes
+      run_name: ${earthrovers.model.type}_nLoc${earthrovers.dataloader.train_num_locations}_nH${earthrovers.dataloader.train_max_hours_per_location}

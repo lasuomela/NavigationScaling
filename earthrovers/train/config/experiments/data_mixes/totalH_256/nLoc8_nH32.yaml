@@ -1,0 +1,13 @@
+# @package _global_
+
+defaults:
+  - /experiments/data_mixes/train_base
+  - _self_
+
+earthrovers:
+  dataloader:
+    train_num_locations: 8
+    train_min_hours_per_location: 32
+    train_max_hours_per_location: 32
+
+    val_max_rides_per_location: 50

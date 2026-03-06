@@ -1,0 +1,17 @@
+# @package _global_
+
+defaults:
+  - /experiments/model_ablations/train_base
+  - /model: diffusion_unet
+  - _self_
+
+earthrovers:
+  model:
+    parametrization: "cfm"
+
+  dataloader:
+    batch_size: 64
+
+  trainer:
+    wandb:
+      run_name: cfm_${earthrovers.model.type}_nLoc${earthrovers.dataloader.train_num_locations}_nH${earthrovers.dataloader.train_max_hours_per_location}

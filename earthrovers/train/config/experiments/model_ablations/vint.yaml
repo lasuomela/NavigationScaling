@@ -1,0 +1,10 @@
+# @package _global_
+
+defaults:
+  - /experiments/model_ablations/train_base
+  - /model: vint
+  - _self_
+
+earthrovers:
+  dataloader:
+    batch_size: 64

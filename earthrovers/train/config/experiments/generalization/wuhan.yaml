@@ -1,0 +1,19 @@
+# @package _global_
+
+defaults:
+  - /experiments/generalization/train_base
+  - _self_
+
+earthrovers:
+  dataloader:
+    train_num_locations: 0 # We don't use any data from the actual training set
+    train_with_val_set: True
+    valtrain_cluster_ids: [1] # In the split used in the experiments, cluster 1 corresponds to Wuhan
+    val_cluster_ids: [0, 11, 13, 14, 17, 74, 195]
+    valtrain_max_hours_per_location: 25
+
+  trainer:
+    num_epochs: 8
+    wandb:
+      group: generalization
+      run_name: ${earthrovers.model.type}_nH${earthrovers.dataloader.valtrain_max_hours_per_location}_Wuhan

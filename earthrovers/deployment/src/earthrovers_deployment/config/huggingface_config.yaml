@@ -1,0 +1,140 @@
+# Theia encoder, UNet denoiser with a flow matching objective
+EarthRovers_CFM-Unet_nLoc32_nH32:
+  diffusion_steps: 10
+  execution_horizon: 2
+  guided_diffusion_steps: 6
+  image_size:
+  - 224
+  - 224
+  inference_delay: 1
+  max_guidance_weight: 5.0
+  max_sequence_length: 1
+  model_hf_name: lauriasuo/EarthRovers_CFM-Unet_nLoc32_nH32
+  model_type: diffusion_policy
+  net_type: single
+  normalization_type: IMAGENET_STANDARD
+  num_actions: 1
+  parametrization: cfm_guided # CFM w/ Pseudoinverse guidance / real-time chunking
+  prefix_attention_horizon: 4
+  prefix_attention_schedule: exp
+  square_method: resize
+
+# Theia encoder, UNet denoiser with a diffusion denoising objective
+EarthRovers_DP-Unet_nLoc32_nH32:
+  diffusion_steps: 10
+  execution_horizon: 2
+  image_size:
+  - 224
+  - 224
+  max_sequence_length: 1
+  model_hf_name: lauriasuo/EarthRovers_DP-Unet_nLoc32_nH32
+  model_type: diffusion_policy
+  net_type: single
+  normalization_type: IMAGENET_STANDARD
+  num_actions: 1
+  parametrization: eps_ensemble # Diffusion policy w/ temporal ensembling
+  square_method: resize
+
+# DINO3 encoder, MLP policy head
+EarthRovers_MLP-BC-DINO3_nLoc32_nH32:
+  image_size:
+  - 224
+  - 224
+  model_hf_name: lauriasuo/EarthRovers_MLP-BC-DINO3_nLoc32_nH32
+  model_type: mlp_policy
+  normalization_type: IMAGENET_DEFAULT
+  square_method: resize
+
+# Theia encoder, MLP policy head
+EarthRovers_MLP-BC_nLoc153_nH-1:
+  image_size:
+  - 224
+  - 224
+  model_hf_name: lauriasuo/EarthRovers_MLP-BC_nLoc153_nH-1
+  model_type: mlp_policy
+  normalization_type: IMAGENET_STANDARD
+  square_method: resize
+
+# Theia encoder, MLP policy head, test locations included in training
+EarthRovers_MLP-BC_nLoc153_nH-1_inc_test:
+  image_size:
+  - 224
+  - 224
+  model_hf_name: lauriasuo/EarthRovers_MLP-BC_nLoc153_nH-1_inc_test
+  model_type: mlp_policy
+  normalization_type: IMAGENET_STANDARD
+  square_method: resize
+
+# Theia encoder, MLP policy head
+EarthRovers_MLP-BC_nLoc32_nH32:
+  image_size:
+  - 224
+  - 224
+  model_hf_name: lauriasuo/EarthRovers_MLP-BC_nLoc32_nH32
+  model_type: mlp_policy
+  normalization_type: IMAGENET_STANDARD
+  square_method: resize
+
+# Theia encoder, MLP policy head
+EarthRovers_MLP-BC_nLoc64_nH16:
+  image_size:
+  - 224
+  - 224
+  model_hf_name: lauriasuo/EarthRovers_MLP-BC_nLoc64_nH16
+  model_type: mlp_policy
+  normalization_type: IMAGENET_STANDARD
+  square_method: resize
+
+# Theia encoder, MLP policy head
+EarthRovers_MLP-BC_nLoc64_nH2:
+  image_size:
+  - 224
+  - 224
+  model_hf_name: lauriasuo/EarthRovers_MLP-BC_nLoc64_nH2
+  model_type: mlp_policy
+  normalization_type: IMAGENET_STANDARD
+  square_method: resize
+
+# Theia encoder, MLP policy head
+EarthRovers_MLP-BC_nLoc64_nH4:
+  image_size:
+  - 224
+  - 224
+  model_hf_name: lauriasuo/EarthRovers_MLP-BC_nLoc64_nH4
+  model_type: mlp_policy
+  normalization_type: IMAGENET_STANDARD
+  square_method: resize
+
+# Theia encoder, MLP policy head
+EarthRovers_MLP-BC_nLoc64_nH8:
+  image_size:
+  - 224
+  - 224
+  model_hf_name: lauriasuo/EarthRovers_MLP-BC_nLoc64_nH8
+  model_type: mlp_policy
+  normalization_type: IMAGENET_STANDARD
+  square_method: resize
+
+# Theia encoder, transformer sequence backbone, UNet diffusion denoiser
+EarthRovers_NoMAD_nLoc32_nH32:
+  diffusion_steps: 10
+  image_size:
+  - 224
+  - 224
+  max_sequence_length: 6
+  model_hf_name: lauriasuo/EarthRovers_NoMAD_nLoc32_nH32
+  model_type: nomad_policy
+  normalization_type: IMAGENET_STANDARD
+  num_actions: 6
+  square_method: resize
+
+# Theia encoder, transformer sequence backbone, MLP policy head
+EarthRovers_ViNT_nLoc32_nH32:
+  image_size:
+  - 224
+  - 224
+  max_sequence_length: 6
+  model_hf_name: lauriasuo/EarthRovers_ViNT_nLoc32_nH32
+  model_type: vint_policy
+  normalization_type: IMAGENET_STANDARD
+  square_method: resize

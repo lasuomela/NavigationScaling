@@ -1,0 +1,19 @@
+# @package _global_
+
+defaults:
+  - /trainer: base
+  - /dataloader: base
+  - _self_
+
+earthrovers:
+
+  dataloader:
+    train_num_locations: 32
+    train_min_hours_per_location: 30
+    train_max_hours_per_location: 32
+    val_max_rides_per_location: 50
+
+  trainer:
+    wandb:
+      group: model_ablations
+      run_name: ${earthrovers.model.type}_nLoc${earthrovers.dataloader.train_num_locations}_nH${earthrovers.dataloader.train_max_hours_per_location}

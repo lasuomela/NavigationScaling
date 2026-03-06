@@ -1,0 +1,5 @@
+# @package _global_
+
+defaults:
+  - /experiments/generalization/train_base
+  - _self_

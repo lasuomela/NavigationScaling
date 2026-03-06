@@ -1,0 +1,76 @@
+# VCS and editor metadata
+.git/
+.gitignore
+.gitattributes
+.vscode/
+.idea/
+*.code-workspace
+
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+*.so
+.venv/
+venv/
+env/
+ENV/
+
+# Build/package artifacts
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Test and tooling caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache/
+
+# Notebook/checkpoint clutter
+.ipynb_checkpoints/
+
+# Project logs and outputs
+logs/
+output/
+outputs/
+*outputs/
+earthrovers/outputs/
+earthrovers/train/outputs/
+earthrovers/train/train_utils/logs/
+earthrovers/train/train_utils/lightning_logs/
+
+# Local temp and backups
+tmp/
+bkp/
+core
+
+# Large local datasets/artifacts
+Datasets/
+dataset/
+earthrovers/data_wrangling/output/
+earthrovers/deployment/hf_cache/
+
+# Large model/media artifact patterns
+**/*.pt
+**/*.pth
+**/*.ckpt
+**/*.safetensors
+**/*.bin
+**/*.onnx
+**/*.npz
+**/*.npy
+**/*.rrd
+**/*.arrow
+**/*.png
+**/*.jpg
+**/*.jpeg
+**/*.webp
+**/*.mp4
+**/*.mov
+**/*.avi
+**/*.mkv

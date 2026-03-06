@@ -1,0 +1,32 @@
+# Conda environment for training EarthRovers navigation models
+name: earthrovers
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - pandas
+  - geopandas
+  - contextily
+  - scikit-learn
+  - matplotlib
+  - rerun-sdk=0.29.0
+  - aiofiles
+  - einops
+  - lightning=2.6.0
+  - wandb
+  - opencv=4.12.0
+  - datasets=4.5.0
+  - transformers=5.0.0
+  - hydra-core
+  - diffusers=0.35.2
+  - ipykernel<7
+  - pip:
+    - gtsam==4.3a0
+    - torchcfm
+    - --extra-index-url https://download.pytorch.org/whl/cu124
+    - torch==2.6.0+cu124
+    - torchvision==0.21.0+cu124

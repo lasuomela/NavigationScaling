@@ -1,0 +1,6 @@
+example_mlp_policy_config:
+  model_type: "mlp_policy"
+  ckpt_path: <PATH_TO_CHECKPOINT>, relative to `model_weight_dir` parameter in `navigation_node.py´. E.g. `4uhkolic/model-epoch=01-step=51202-val_loss=0.1352.ckpt`
+  image_size: [224, 224]
+  normalization_type: "IMAGENET_STANDARD"
+  square_method: "resize"

@@ -1,0 +1,19 @@
+# @package _global_
+
+defaults:
+  - /experiments/generalization/train_base
+  - _self_
+
+earthrovers:
+  dataloader:
+    train_with_val_set: True # Train with all locations used for validation
+
+    # Pick 25H worth of data from all validation locations for training
+    valtrain_num_locations: -1
+    valtrain_max_hours_per_location: 25
+
+  trainer:
+    num_checkpoints: 4
+    wandb:
+      group: generalization
+      run_name: ${earthrovers.model.type}_nLoc${earthrovers.dataloader.train_num_locations}_nH${earthrovers.dataloader.train_max_hours_per_location}_train_with_val
