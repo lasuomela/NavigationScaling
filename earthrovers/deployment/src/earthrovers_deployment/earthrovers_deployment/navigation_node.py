@@ -42,7 +42,7 @@ class NavigationNode(Node):
         self.declare_parameters(
             namespace='',
             parameters=[
-                ('model', 'EarthRovers_DP-Unet_nLoc32_nH32'), #'EarthRovers_MLP-BC_nLoc153_nH-1'),
+                ('model', 'EarthRovers_MLP-BC_nLoc153_nH-1'),
                 ('model_config_path', str(pkg_top_dir / 'deployment/src/earthrovers_deployment/config/huggingface_config.yaml')),
                 ('model_weight_dir', str(pkg_top_dir / 'deployment/src/earthrovers_deployment/model_weights')),
                 ('device', 'cuda'),
