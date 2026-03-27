@@ -193,10 +193,14 @@ See `earthrovers/train/config/default_structured_configs.py` for all available c
 If you use this repository in your research, please consider citing our paper:
 
 ```
-@misc{suomela2026data_scaling,
-  title={Data Scaling for Navigation in Unknown Environments},
-  author={Suomela, Lauri and Takahata, Naoki and Kuruppu Arachchige, Sasanka and Edelman, Harry and Kämäräinen, Joni-Kristian},
-  journal={arXiv:2601.09444},
+@article{suomela2026data,
+  author={Suomela, Lauri and Takahata, Naoki and Arachchige, Sasanka Kuruppu and Edelman, Harry and Kämäräinen, Joni-Kristian},
+  journal={IEEE Robotics and Automation Letters}, 
+  title={Data Scaling for Navigation in Unknown Environments}, 
   year={2026},
+  volume={},
+  number={},
+  pages={1-8},
+  doi={10.1109/LRA.2026.3677718}
 }
 ```
